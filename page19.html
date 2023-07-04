@@ -1,0 +1,48 @@
+<!-- page19.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Alice in Wonderland Adventure</title>
+</head>
+<body>
+  <div class="container">
+    <h1>The Mysterious Sound</h1>
+    <div class="center">
+      <button id="start-button">Start Audio</button>
+    </div>
+    
+    <p>
+      You hear a strange and mysterious sound echoing through the forest. It piques your curiosity and draws you deeper into Wonderland. The sound is an enchanting melody, filling the air with an otherworldly charm.
+    </p>
+    <audio src="unbirthday.mp3" autoplay></audio>
+    <p>
+      You follow the sound, unable to resist its allure. It leads you through twisting paths and hidden clearings, creating an atmosphere of wonder and anticipation. As you venture further, the melody grows louder and more enchanting.
+    </p>
+    <p>
+      Eventually, you come across a magical scene—a gathering of woodland creatures dancing and celebrating. The sound emanates from their joyful music, and you find yourself captivated by their enchanting performance.
+    </p>
+    <div class="choices">
+      <a href="page20.html" class="choice-button">Join the Celebration</a>
+    </div>
+  </div>
+  <script>
+    const audio = document.querySelector('audio'); // Select the audio element using its tag name
+const startButton = document.getElementById('start-button');
+
+startButton.addEventListener('click', () => {
+  if (audio.paused) {
+    audio.play();
+    startButton.textContent = 'Pause Audio';
+  } else {
+    audio.pause();
+    startButton.textContent = 'Start Audio';
+  }
+});
+
+  </script>
+</body>
+</html>
